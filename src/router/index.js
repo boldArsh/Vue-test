@@ -4,10 +4,15 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
+  // {
+  //   path: "/",
+  //   name: "anchor-location",
+  //   component: () => import("@/components/anchor-location/anchor-location.vue")
+  // }
   {
     path: "/",
-    name: "anchor-location",
-    component: () => import("@/components/anchor-location//anchor-location.vue")
+    name: "store",
+    component: () => import("@/components/store")
   }
   // {
   //   path: '/about',

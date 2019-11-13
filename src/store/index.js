@@ -1,3 +1,4 @@
+import {SOME_MUTATION} from './mutation-types';
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -14,6 +15,7 @@ export default new Vuex.Store({
     c: '5',
     d: '699',
     e: '4',
+    number:0
   },
   getters: {
     doneTodos: state => {
@@ -24,6 +26,12 @@ export default new Vuex.Store({
     }
   },
   mutations: {
+    [SOME_MUTATION](state,payLoad){
+      state.number += payLoad.num;
+    },
+    subtract(state,payLoad){
+      state.number -=  payLoad.num;
+    }
   },
   actions: {
   },
